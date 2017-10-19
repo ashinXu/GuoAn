@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:background="@drawable/default_img">
+
+
+        <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_launcher"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_avatar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="大锤"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_rank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <ImageView
+            android:id="@+id/iv_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/icon_level"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_level"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="我的等级"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="Lv 5"
+            android:textColor="@color/black"
+            android:textSize="13sp"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_collect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <ImageView
+            android:id="@+id/iv_collect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/icon_collect"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_collect"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="我的收藏"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_arrow_right"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+
+        <ImageView
+            android:id="@+id/iv_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/icon_score"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_score"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="我的积分"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_arrow_right"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_feed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+
+        <ImageView
+            android:id="@+id/iv_feed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/icon_feed"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_feed"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="我的活动"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_arrow_right"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <ImageView
+            android:id="@+id/iv_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/icon_setting"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_setting"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="账号管理"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_arrow_right"/>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
