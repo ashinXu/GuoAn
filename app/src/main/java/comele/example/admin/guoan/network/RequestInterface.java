@@ -59,4 +59,15 @@ public class RequestInterface {
     }
 
 
+    public interface AccountInterface {
+
+
+        /**
+         * 获取验证码
+         */
+        @POST("i/passport/activeCode/{phoneNum}")
+        Call<ResponseBean.NormalResult> getVerifyCode(@Path("phoneNum") String phoneNum);
+    }
+
+
 }

@@ -17,6 +17,16 @@ public class ResponseBean {
         public String result_msg;
     }
 
+
+    public static class NormalResult {
+
+        public String success;
+        public String code;
+        public String msg;
+
+    }
+
+
     public static class Cover {
         public String createTime;
         public String description;
