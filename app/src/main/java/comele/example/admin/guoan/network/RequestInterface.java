@@ -3,8 +3,11 @@ package comele.example.admin.guoan.network;
 import java.util.List;
 
 import comele.example.admin.guoan.bean.ResponseBean;
+import okhttp3.RequestBody;
 import retrofit2.Call;
+import retrofit2.http.Multipart;
 import retrofit2.http.POST;
+import retrofit2.http.Part;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
 
@@ -54,6 +57,20 @@ public class RequestInterface {
          */
         @POST("i/passport/activeCode/{phoneNum}")
         Call<ResponseBean.NormalResult> getVerifyCode(@Path("phoneNum") String phoneNum);
+
+
+        /**
+         * 用户注册
+         */
+        @POST("i/passport/reg/{activeCode}/{phoneNum}/{password}/{regSource}")
+        Call<ResponseBean.NormalResult> userRegister(@Path("activeCode") int activeCode, @Path("phoneNum") String phoneNum, @Path("password") String password, @Path("regSource") String regSource);
+    }
+
+    public interface UploadImageInterface {
+
+        @Multipart
+        @POST("i/news/uploadImg")
+        Call<String> updateAvatar(@Part("file\"; filename=\"image.png\"") RequestBody file);
     }
 
 
