@@ -15,7 +15,8 @@
         android:paddingBottom="10dp"
         android:paddingLeft="8dp"
         android:paddingRight="8dp"
-        android:paddingTop="10dp">
+        android:paddingTop="10dp"
+        android:visibility="gone">
 
         <ImageView
             android:layout_width="wrap_content"
@@ -39,6 +40,9 @@
 
 
     </RelativeLayout>
+
+
+    <include layout="@layout/layout_title"/>
 
     <WebView
         android:id="@+id/web_news"

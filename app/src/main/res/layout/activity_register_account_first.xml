@@ -9,6 +9,7 @@
 
 
     <RelativeLayout
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/color_F8F8F8">
@@ -36,6 +37,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </RelativeLayout>
+
+
+    <include layout="@layout/layout_title"/>
 
     <View
         android:layout_width="match_parent"

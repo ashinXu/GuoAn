@@ -131,21 +131,57 @@ public class NewsRequest {
             EventBus.getDefault().post(event, tag);
             return;
         }
-        RequestCallBack<String> cb = new RequestCallBack<String>() {
+        RequestCallBack<Boolean> cb = new RequestCallBack<Boolean>() {
             @Override
-            public void onSuccess(Call<String> call, Response<String> response) {
+            public void onSuccess(Call<Boolean> call, Response<Boolean> response) {
                 EventBus.getDefault().post(response.body(), tag);
             }
 
             @Override
-            public void onFail(Call<String> call, Throwable t) {
+            public void onFail(Call<Boolean> call, Throwable t) {
                 event.result_code = ResponseCode.REQUEST_FAILED;
                 EventBus.getDefault().post(event, tag);
             }
         };
 
         RequestInterface.CoverInterface coverInterface = RequestBuilder.getInstance().build(RequestInterface.CoverInterface.class);
-        Call<String> call = coverInterface.getNewsDetail(id);
+        Call<Boolean> call = coverInterface.praiseNews(id);
+        call.enqueue(cb);
+
+    }
+
+
+
+
+    /**
+     * 获取聚合页的新闻列表
+     *
+     * @param tag
+     */
+    public static void getMergeNewsList(int offset, int rows, final String tag) {
+
+        final ResponseBean.BaseResult event = new ResponseBean.BaseResult();
+
+        if (!CommonUtil.isNetworkAvailable()) {
+            event.result_code = ResponseCode.NERWORK_NOT_AVAILABLE;
+            EventBus.getDefault().post(event, tag);
+            return;
+        }
+        RequestCallBack<List<ResponseBean.NewsEntity>> cb = new RequestCallBack<List<ResponseBean.NewsEntity>>() {
+            @Override
+            public void onSuccess(Call<List<ResponseBean.NewsEntity>> call, Response<List<ResponseBean.NewsEntity>> response) {
+                EventBus.getDefault().post(response.body(), tag);
+            }
+
+            @Override
+            public void onFail(Call<List<ResponseBean.NewsEntity>> call, Throwable t) {
+                event.result_code = ResponseCode.REQUEST_FAILED;
+                EventBus.getDefault().post(event, tag);
+            }
+        };
+
+        RequestInterface.CoverInterface coverInterface = RequestBuilder.getInstance().build(RequestInterface.CoverInterface.class);
+        Call<List<ResponseBean.NewsEntity>> call = coverInterface.getNewsList(offset, rows);
         call.enqueue(cb);
 
     }

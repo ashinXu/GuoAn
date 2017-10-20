@@ -54,7 +54,10 @@ public class RegisterAccountFirstAcitivty extends AppCompatActivity {
     }
 
 
-    //获取首页新闻数据
+    /**
+     * 获取手机验证码
+     * @param result
+     */
     @Subscriber(tag = TAG_GET_VERIFY_CODE)
     private void onGetVerifyCode(ResponseBean.NormalResult result) {
         if (result != null) {

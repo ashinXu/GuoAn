@@ -218,13 +218,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 forgetPassword();
                 break;
             case R.id.iv_weixin:
-
+                qqLogin();
                 break;
             case R.id.iv_weibo:
                 wbLogin();
                 break;
             case R.id.iv_qq:
-                qqLogin();
+
                 break;
         }
     }
