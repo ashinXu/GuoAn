@@ -45,7 +45,8 @@
         <activity android:name=".activity.SplashActivity"/>
         <activity android:name=".activity.UserAccountActivity"/>
         <activity android:name=".activity.MainActivity"/>
-        <activity android:name=".activity.RegisterAccountFirstAcitivty"/>
+        <activity android:name=".activity.RegisterAccountFirstActivity"/>
+        <activity android:name=".activity.RegisterAccountSecondActivity"/>
         <activity android:name=".activity.NewsDetailActivity"/>
         <activity android:name=".activity.CurrentTopActivity"/>
     </application>

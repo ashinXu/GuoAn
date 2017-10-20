@@ -32,6 +32,7 @@ public class ConstUtil {
     public static final String TAG_USER_NAME = "user_name";
     public static final String TAG_USER_AVATAR = "user_avatar";
     public static final String TAG_NEWS_ID = "news_id";
+    public static final String TAG_PHONE = "phone";
 
 
 }

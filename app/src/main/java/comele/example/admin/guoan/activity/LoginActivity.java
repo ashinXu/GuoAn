@@ -298,7 +298,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
      * 快速注册
      */
     private void register() {
-        Intent intent = new Intent(this, RegisterAccountFirstAcitivty.class);
+        Intent intent = new Intent(this, RegisterAccountFirstActivity.class);
         startActivity(intent);
 
     }

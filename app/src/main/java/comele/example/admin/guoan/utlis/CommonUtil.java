@@ -8,6 +8,9 @@ import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import comele.example.admin.guoan.R;
 import comele.example.admin.guoan.UserApplication;
 
@@ -75,6 +78,20 @@ public class CommonUtil {
 
         Picasso.with(context).load(headImgUrl).placeholder(R.drawable.icon_default_head).error(R.drawable.icon_default_head).into(headImgView);
 
+    }
+
+
+    /**
+     * 验证手机号
+     *
+     * @param str
+     * @return
+     */
+    public static boolean isPhone(String str) {
+        String regExp = "^((13[0-9])|(15[^4])|(18[0,2,3,5-9])|(17[0-8])|(147))\\d{8}$";
+        Pattern p = Pattern.compile(regExp);
+        Matcher m = p.matcher(str);
+        return m.matches();
     }
 
 
