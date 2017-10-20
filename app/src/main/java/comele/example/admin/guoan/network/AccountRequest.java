@@ -10,6 +10,7 @@ import retrofit2.Response;
 
 /**
  * Created by admin on 2017/9/28.
+ * 用户接口
  */
 public class AccountRequest {
 
